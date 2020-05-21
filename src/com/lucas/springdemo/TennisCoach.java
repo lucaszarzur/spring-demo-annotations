@@ -36,8 +36,8 @@ public class TennisCoach implements Coach {
 		fortuneService = theFortuneService;
 	}*/
 
-	@Autowired
 	// Injection with custom method name, just calling @Autowired
+	@Autowired
 	public void doSomeCrazyStuff(FortuneService theFortuneService) {
 		System.out.println(">> TennisCoach: inside doSomeCrazyStuff() method");
 		fortuneService = theFortuneService;
