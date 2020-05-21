@@ -8,11 +8,16 @@ public class TennisCoach implements Coach {
 
 	private FortuneService fortuneService;
 
-	// Constructor
+	// define a default constructor
+	public TennisCoach() {
+		System.out.println(">> TennisCoach: inside default constructor");
+	}
+
+	/*// Constructor
 	@Autowired
 	public TennisCoach(FortuneService theFortuneService) {
 		fortuneService = theFortuneService;
-	}
+	}*/
 
 	@Override
 	public String getDailyWorkout() {
@@ -22,5 +27,12 @@ public class TennisCoach implements Coach {
 	@Override
 	public String getDailyFortune() {
 		return fortuneService.getFortune();
+	}
+
+	// define a setter method
+	@Autowired
+	public void setFortuneService(FortuneService theFortuneService) {
+		System.out.println(">> TennisCoach: inside setFortuneService() method");
+		fortuneService = theFortuneService;
 	}
 }
